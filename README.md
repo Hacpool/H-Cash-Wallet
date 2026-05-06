@@ -19,6 +19,10 @@ Manage your Hacash assets easily.
 - `review/vault.js`
 - `review/pin-security.js`
 - `review/security-ticket.js`
+- `review/crypto.js`
+- `review/config.js`
+- `review/storage.js`
+- `review/SECURITY-REVIEW-NOTE.md`
 
 ## Release
 

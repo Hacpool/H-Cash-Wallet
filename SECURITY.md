@@ -19,6 +19,16 @@
 
 Only selected reviewable files are published in this public package.
 
+Included public review files:
+
+- `review/vault.js`
+- `review/pin-security.js`
+- `review/security-ticket.js`
+- `review/crypto.js`
+- `review/config.js`
+- `review/storage.js`
+- `review/SECURITY-REVIEW-NOTE.md`
+
 ## Distribution
 
 Official browser distribution is through the Chrome Web Store listing linked on the public page.

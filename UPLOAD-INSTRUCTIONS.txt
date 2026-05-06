@@ -1,0 +1,20 @@
+﻿Upload these files to the H-Cash Wallet GitHub repo to refresh the public security review scope.
+
+Files to update in repo root:
+- README.md
+- SECURITY.md
+- index.html
+
+Files to update/add under review/:
+- review/index.html
+- review/README.md
+- review/vault.js
+- review/pin-security.js
+- review/security-ticket.js
+- review/crypto.js
+- review/config.js
+- review/storage.js
+- review/SECURITY-REVIEW-NOTE.md
+
+Do not upload any other extension source files.
+Do not expand public scope beyond these files.
