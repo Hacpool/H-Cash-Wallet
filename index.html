@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H-Cash Wallet</title>
+    <meta
+      name="description"
+      content="Manage your Hacash assets easily."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Official Public Page</p>
+        <h1>H-Cash Wallet</h1>
+        <p class="hero-copy">Manage your Hacash assets easily.</p>
+        <div class="hero-actions">
+          <a
+            class="button button--primary"
+            href="https://chromewebstore.google.com/detail/h-cash-wallet/ahgahfiomdonfahncogcjhdojfamhbpd?authuser=0&hl=tr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chrome Web Store
+          </a>
+          <a class="button" href="./review/index.html">Review Files</a>
+          <a class="button" href="./release/0.3.1.html">Version 0.3.1</a>
+        </div>
+      </section>
+
+      <section class="section-grid">
+        <article class="info-card">
+          <h2>Why Users Trust It</h2>
+          <ul>
+            <li>Self-custody wallet flow</li>
+            <li>PIN-protected access</li>
+            <li>Session timeout protection</li>
+            <li>Origin approval checks</li>
+            <li>No broad public source dump of sensitive operational logic</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h2>Security Highlights</h2>
+          <ul>
+            <li>Session-only unlock handling</li>
+            <li>PIN failure lockout policy</li>
+            <li>Scoped request approval flow</li>
+            <li>One-time security ticket validation</li>
+            <li>Trusted Chrome Web Store distribution</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="media-grid">
+        <img src="./assets/1.png" alt="H-Cash Wallet cover" />
+        <img src="./assets/2.png" alt="H-Cash Wallet unlock screen" />
+        <img src="./assets/3.png" alt="H-Cash Wallet main interface" />
+        <img src="./assets/4.png" alt="H-Cash Wallet visual banner" />
+      </section>
+
+      <section class="info-card info-card--wide">
+        <h2>Public Review Scope</h2>
+        <p>
+          This public package intentionally exposes only selected reviewable files.
+          It is designed for security review and user transparency without publishing
+          sensitive operational details.
+        </p>
+        <div class="inline-links">
+          <a href="./review/vault.js">vault.js</a>
+          <a href="./review/pin-security.js">pin-security.js</a>
+          <a href="./review/security-ticket.js">security-ticket.js</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
