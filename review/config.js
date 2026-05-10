@@ -1,6 +1,8 @@
 export const WALLET_NAME = "H-Cash Wallet";
-export const WALLET_VERSION = "0.3.1";
+export const WALLET_VERSION = "0.3.3";
 export const SESSION_TTL_MS = 1 * 60 * 60 * 1000;
+export const AUTO_BID_SESSION_BUFFER_HOURS = 1;
+export const AUTO_BID_SESSION_MAX_HOURS = 12;
 export const SENSITIVE_REVEAL_TTL_MS = 45 * 1000;
 export const LEGACY_PBKDF2_ITERATIONS = 320_000;
 export const PBKDF2_ITERATIONS = 900_000;
@@ -57,6 +59,7 @@ export function getAllowedSiteOrigins() {
 export const ALLOWED_SITE_ORIGINS = new Set(getAllowedSiteOrigins());
 
 export const SECURE_WALLET_API_BASE_URL = "https://hacpool.xyz/api/hacash-wallet";
+export const OFFICIAL_HACASH_NODE_API_BASE_URL = "http://nodeapi.hacash.org";
 export const DEFAULT_EXPLORER_URL = "https://explorer.hacash.org";
 export const HCASH_SECURITY_TICKET_PUBLIC_KEY_PEM = `-----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWTtDj3XogwPy05YLyIjcqm+Z27OX

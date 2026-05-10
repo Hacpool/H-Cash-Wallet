@@ -1,20 +1,22 @@
 # H-Cash Wallet
 
-Manage your Hacash assets easily.
+Minimal public GitHub Pages package for `0.3.3`.
 
-## Official Chrome Web Store
+This repository view is intentionally limited to:
 
-- [H-Cash Wallet on Chrome Web Store](https://chromewebstore.google.com/detail/h-cash-wallet/ahgahfiomdonfahncogcjhdojfamhbpd?authuser=0&hl=tr)
+- current public release references
+- selected public review files required for security review
+- release notes
 
-## Security Highlights
+It does **not** need to include the full wallet source tree or sensitive operational details.
 
-- PIN-protected wallet access
-- Session timeout handling
-- Trusted origin approval
-- One-time request ticket validation
-- Selective public review scope
+## Current Release
 
-## Public Review Files
+- `0.3.3`
+- [Release page](./release/0.3.3.html)
+- [Release notes](./GITHUB-RELEASE-NOTES-0.3.3.md)
+
+## Included Review Files
 
 - `review/vault.js`
 - `review/pin-security.js`
@@ -23,7 +25,3 @@ Manage your Hacash assets easily.
 - `review/config.js`
 - `review/storage.js`
 - `review/SECURITY-REVIEW-NOTE.md`
-
-## Release
-
-- `0.3.1`

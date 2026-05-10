@@ -22,12 +22,27 @@ import {
 
 let legacySigningCachePurged = false;
 
+function resolveSessionExpiryMs(session) {
+  const explicitExpiryMs = Number(session?.expiresAt);
+  if (Number.isFinite(explicitExpiryMs) && explicitExpiryMs > 0) {
+    return explicitExpiryMs;
+  }
+
+  const unlockedAtMs = Number(session?.unlockedAt);
+  if (!Number.isFinite(unlockedAtMs) || unlockedAtMs <= 0) {
+    return null;
+  }
+
+  return unlockedAtMs + SESSION_TTL_MS;
+}
+
 function sessionExpired(session) {
-  if (!session?.unlockedAt) {
+  const expiryMs = resolveSessionExpiryMs(session);
+  if (!Number.isFinite(expiryMs)) {
     return true;
   }
 
-  return Date.now() - Number(session.unlockedAt) > SESSION_TTL_MS;
+  return Date.now() >= Number(expiryMs);
 }
 
 function createEmptyWalletStore() {
@@ -154,7 +169,8 @@ async function addWalletToStore(account, pin) {
   await setSession(STORAGE_KEYS.session, {
     address: account.address,
     privateKey: account.privateKey,
-    unlockedAt: Date.now()
+    unlockedAt: Date.now(),
+    expiresAt: null
   });
 
   return store;
@@ -307,7 +323,8 @@ export async function unlockWallet(pin, address = "") {
   await setSession(STORAGE_KEYS.session, {
     address: walletRecord.address,
     privateKey,
-    unlockedAt: Date.now()
+    unlockedAt: Date.now(),
+    expiresAt: null
   });
 
   return getVaultState();
@@ -366,6 +383,24 @@ export async function requireUnlockedSession() {
     ...session,
     address: activeAddress
   };
+}
+
+export async function extendUnlockedSessionExpiry(expiresAtMs) {
+  const session = await requireUnlockedSession();
+  const safeExpiryMs = Number(expiresAtMs);
+
+  if (!Number.isFinite(safeExpiryMs) || safeExpiryMs <= Date.now()) {
+    throw new Error("Gecersiz H-Cash otomatik teklif oturum suresi.");
+  }
+
+  const nextSession = {
+    ...session,
+    unlockedAt: Date.now(),
+    expiresAt: safeExpiryMs
+  };
+
+  await setSession(STORAGE_KEYS.session, nextSession);
+  return nextSession;
 }
 
 export async function approveOrigin(origin) {

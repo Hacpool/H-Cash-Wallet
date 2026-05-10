@@ -1,6 +1,6 @@
 # Public Review Files
 
-This folder contains selected files for public review.
+This folder contains the selected files required for public security review of `H-Cash Wallet 0.3.3`.
 
 Included:
 
@@ -12,4 +12,4 @@ Included:
 - `storage.js`
 - `SECURITY-REVIEW-NOTE.md`
 
-These files are intended for review of wallet access, session handling, request authorization behavior, encryption settings, session storage scope, and security-related configuration.
+These files are intended for review of wallet access, session handling, PIN protection, request authorization behavior, encryption settings, session storage scope, and security-related configuration.

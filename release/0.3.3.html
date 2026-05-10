@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H-Cash Wallet 0.3.3</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Release</p>
+        <h1>Version 0.3.3</h1>
+        <p class="hero-copy">
+          Stabilized H-Cash wallet approval, bidding, and long-running auto-bid flows.
+        </p>
+      </section>
+
+      <section class="section-grid">
+        <article class="info-card">
+          <h2>Highlights</h2>
+          <ul>
+            <li>stabilized H-Cash connect approval flow on hacpool.xyz</li>
+            <li>restored H-Cash native bid and auto-bid approval windows</li>
+            <li>improved approval popup layout and close behavior</li>
+            <li>improved wallet switcher layout and address visibility</li>
+            <li>kept MoneyNex in connection-only mode</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h2>Security and Reliability</h2>
+          <ul>
+            <li>connect approval no longer depends on fragile background-only timing</li>
+            <li>native bid security ticket origin handling was aligned with the live site origin</li>
+            <li>canceling the H-Cash connect popup no longer leaves the site connected</li>
+            <li>H-Cash connect state now clears correctly before each new approval attempt</li>
+            <li>auto-bid session unlock duration now extends dynamically up to 12 hours</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

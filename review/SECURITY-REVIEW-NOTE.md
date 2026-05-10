@@ -1,6 +1,6 @@
 # Security Review Note
 
-This review package intentionally exposes only selected files that are sufficient to inspect:
+This public review package intentionally exposes only selected files that are sufficient to inspect:
 
 - wallet unlock and session handling
 - PIN validation and temporary lockout flow
@@ -20,6 +20,7 @@ Included files:
 
 Important context:
 
-- The wallet does not publish backend operational secrets in this review scope.
+- This review package is intentionally limited and does not expose the full wallet source tree.
+- This review package does not include sensitive operational backend details.
 - Reviewers should treat `chrome.storage.session` as session-scoped extension storage, not as page-accessible local storage.
-- The remaining notable design tradeoff is that an unlocked wallet session must temporarily hold signing capability inside the extension session context until the session expires or the wallet is locked.
+- An unlocked wallet session temporarily holds signing capability inside the extension session context until the session expires or the wallet is locked.
